@@ -18,7 +18,8 @@ class CreateAdvsTable extends Migration
             $table->string('name');
             $table->string('Attachments');
             $table->double('price');
-            $table->text('location');
+            $table->text('descrioption');
+            $table->string('location');
             $table->bigInteger('user_id')->unsigned();
             $table->bigInteger('category_id')->unsigned();
 
