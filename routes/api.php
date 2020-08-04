@@ -38,6 +38,14 @@ Route::post('/register', 'ApiControllers\AuthController@register');
 Route::post('/login', 'ApiControllers\AuthController@login');
 Route::get('/profile/{id}', 'ApiControllers\AdvsController@profile');
 
+Route::put('/update/Profile/{id}', 'ApiControllers\AdvsController@updateProfile');
+
+Route::delete('/delete/profile/{id}', 'ApiControllers\AdvsController@deleteProfile');
+
+
+
+
+
 
 
 
