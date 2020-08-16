@@ -22,7 +22,7 @@ Route::get('/Categories', 'ApiControllers\AdvsController@Categories')->name('Cat
 Route::get('/advsByCategory/{id}', 'ApiControllers\AdvsController@advsByCategory')->name('Categories.advsByCategory');
 
 Route::get('/advById/{id}', 'ApiControllers\AdvsController@advById')->name('Categories.advById');
-Route::get('/advById/{id}', 'ApiControllers\AdvsController@advById')->name('Categories.advById');
+// Route::get('/advById/{id}', 'ApiControllers\AdvsController@advById')->name('Categories.advById');
 
 Route::post('/create/advs', 'ApiControllers\AdvsController@storeAdv')->name('Adv.storeAdv');
 

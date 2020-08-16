@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\Validator;
 
-
 use App\Category;
 use App\Adv;
 use App\User;
@@ -65,8 +64,37 @@ class AdvsController extends Controller
             return response(['error' => $validator->errors(), 'Validation Error']);
         }
 
-        $Adv = Adv::create($request->all());
 
+        
+        //     $files=$request->file('Attachments');
+        //    foreach($files as $file){
+        //     $OriginalName=$file->getClientOriginalName();
+        //     $name =   $OriginalName  ;
+        //        $file= $file->move(public_path('storage/uploads'), $name);
+        //         $path[]= $name;
+             
+        //    }
+        $path=array();
+        if ($request->hasFile('Attachments')) {
+            foreach ($request->file('Attachments') as $key => $file)
+            {
+                    $path[] = $file->store('Attachments', 'public');
+        }
+    } else {
+
+            $path = null;
+        }
+       
+        $Adv =new Adv();
+        $Adv->name = $request->get('name');
+        $Adv->price = $request->get('price');
+        $Adv->location = $request->get('location');
+        $Adv->descrioption = $request->get('descrioption');
+        $Adv ->image = $path;
+        $Adv->category_id = $request->get('category_id');
+        $Adv->user_id = $request->get('user_id');
+            $Adv->save();
+ 
 
         return response([ 'data'=>$Adv, 'message' => 'Created  successfully'], 200);
 
@@ -76,12 +104,13 @@ class AdvsController extends Controller
 // update advertising
     public function updateAdv(Request $request,$id)
     {
+        $data = $request->all();
 
         $validator = Validator::make($data, [
             'name' => 'required|max:255',
             'price' => 'required',
             'location' => 'required',
-            'descrioption' => 'required',
+             'descrioption' => 'required',
             'category_id' => 'required',
             'user_id' => 'required'
         ]);
@@ -90,10 +119,28 @@ class AdvsController extends Controller
             return response(['error' => $validator->errors(), 'Validation Error']);
         }
 
+        $path=array();
+        if ($request->hasFile('Attachments')) {
+            foreach ($request->file('Attachments') as $key => $file)
+            {
+                    $path[] = $file->storeAs('Attachments', 'public');
+        }
+    } else {
 
+            $path = null;
+        }
+       
         $Adv = Adv::find($id);
-     $data= $Adv->update($request->all());
-        return response([ 'data'=>$data, 'message' => 'Retrieved successfully'], 200);
+        $Adv->name = $request->get('name');
+        $Adv->price = $request->get('price');
+        $Adv->location = $request->get('location');
+        $Adv->descrioption = $request->get('descrioption');
+        $Adv ->image = $path;
+        $Adv->category_id = $request->get('category_id');
+        $Adv->user_id = $request->get('user_id');
+            $Adv->save();
+//$data= $Adv->update($request->all());
+        return response([ 'data'=>$Adv, 'message' => 'Retrieved successfully'], 200);
     }
 
 
@@ -127,6 +174,8 @@ class AdvsController extends Controller
 
 public function updateProfile(Request $request,$id)
 {
+
+    $data = $request->all();
 
     $validator = Validator::make($data, [
         'fname' => 'required|max:255',

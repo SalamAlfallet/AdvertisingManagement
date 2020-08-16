@@ -208,7 +208,7 @@
 
 	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Categories</span></a></li>
 
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Category</span></a></li>
+	                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{route('admin.category.create')}}" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Category</span></a></li>
 
 
 
@@ -410,7 +410,7 @@
                     </li>
 
 
-		
+
 
                     <hr>
 
