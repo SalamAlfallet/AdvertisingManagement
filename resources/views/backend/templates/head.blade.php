@@ -7,15 +7,17 @@
 		<meta name="csrf-token" content="{{ csrf_token() }}" />
 
 		<!--begin::Fonts -->
-		<script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script>
-		<script>
+        <!-- <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.16/webfont.js"></script> -->
+        <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Tajawal:400,500,700&display=swap&subset=arabic"> -->
+        <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@500&display=swap" rel="stylesheet">
+	<!-- <script>
 			WebFont.load({
                 google: {"families":["Poppins:300,400,500,600,700","Roboto:300,400,500,600,700"]},
                 active: function() {
                     sessionStorage.fonts = true;
                 }
             });
-        </script>
+        </script>  -->
 
 		<!--end::Fonts -->
 
@@ -86,6 +88,9 @@
 .custom-file-label{
 width:502px !important;
 }
+
+
+
 </style>
 @yield('style')
     </head>

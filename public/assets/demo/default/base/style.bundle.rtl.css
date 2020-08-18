@@ -60,7 +60,12 @@ $kt-media-breakpoints: (
   box-sizing: border-box; }
 
 html {
-  font-family: sans-serif;
+  
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px !important;
+    font-weight: 440  !important;
+
+
   line-height: 1.15;
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0); }
@@ -70,13 +75,17 @@ article, aside, figcaption, figure, footer, header, hgroup, main, nav, section {
 
 body {
   margin: 0;
-  font-family: "Poppins";
-  font-size: 1rem;
-  font-weight: 400;
+ 
   line-height: 1.5;
   color: #212529;
   text-align: right;
-  background-color: #fff; }
+  background-color: #fff;
+
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px !important;
+    font-weight: 440  !important;
+
+}
 
 [tabindex="-1"]:focus {
   outline: 0 !important; }
@@ -16026,7 +16035,10 @@ code {
 
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
 html {
-  font-family: sans-serif;
+ 
+    font-family: 'Tajawal', sans-serif;
+    font-size: 16px !important;
+    font-weight: 440  !important;
   -moz-text-size-adjust: 100%;
   text-size-adjust: 100%;
   -ms-text-size-adjust: 100%;
@@ -16040,7 +16052,10 @@ body {
   padding: 0px;
   font-size: 13px;
   font-weight: 300;
-  font-family: Poppins;
+ 
+  font-family: 'Tajawal', sans-serif;
+  font-size: 16px !important;
+  font-weight: 440  !important;
   -ms-text-size-adjust: 100%;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale; }
@@ -16110,12 +16125,12 @@ canvas {
 @media (min-width: 769px) and (max-width: 1024px) {
   html,
   body {
-    font-size: 12px; } }
+    font-size: 14px; } }
 
 @media (max-width: 768px) {
   html,
   body {
-    font-size: 12px; } }
+    font-size: 14px; } }
 
 .kt-animate-fade-in-up {
   -webkit-animation: kt-animate-fade-in-up .5s;
