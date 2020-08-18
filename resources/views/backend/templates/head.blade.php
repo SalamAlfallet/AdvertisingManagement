@@ -55,11 +55,11 @@
 		<link href="{{ asset('assets/vendors/custom/vendors/flaticon/flaticon.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/vendors/custom/vendors/flaticon2/flaticon.css') }}" rel="stylesheet" type="text/css" />
 		<link href="{{ asset('assets/vendors/custom/vendors/fontawesome5/css/all.min.css') }}" rel="stylesheet" type="text/css" />
- 
+
 		<!--end:: Global Optional Vendors -->
 
 		<!--begin::Global Theme Styles(used by all pages) -->
-		<link href="{{ asset('assets/demo/default/base/style.bundle.css') }}" rel="stylesheet" type="text/css" />
+		<!-- <link href="{{ asset('assets/demo/default/base/style.bundle.css') }}" rel="stylesheet" type="text/css" /> -->
 
 		<!--end::Global Theme Styles -->
 
@@ -72,11 +72,16 @@
 		<!--end::Layout Skins -->
 
 
+        <link href="{{ asset('assets/demo/default/base/style.bundle.rtl.css') }}" rel="stylesheet" type="text/css" />
         <link rel="shortcut icon" href="{{ asset('assets/media/logos/favicon.ico') }}" />
 
         <link href="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.min.css" rel="stylesheet">
-		<!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet"> -->
- 
+        <script src="{{ asset('assets/js/dropzone.js') }}" type="text/javascript"></script>
+
+
+
+        <!-- <link href="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.css" rel="stylesheet"> -->
+
 <style>
 .custom-file-label{
 width:502px !important;

@@ -19,14 +19,14 @@
 					}
 				}
 			};
- 
-			
+
+
 		</script>
 
 		<!-- end::Global Config -->
 
 		<!--begin:: Global Mandatory Vendors -->
-		
+
 		<script src="{{ asset('assets/vendors/general/jquery/dist/jquery.js')}}" type="text/javascript"></script>
 		<script src="{{ asset('assets/vendors/general/popper.js/dist/umd/popper.js')}}" type="text/javascript"></script>
 		<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.4.1/js/bootstrap.bundle.min.js" type="text/javascript"></script> -->
@@ -67,7 +67,7 @@
 		<script src="{{ asset('assets/vendors/general/owl.carousel/dist/owl.carousel.js')}}" type="text/javascript"></script>
 		<script src="{{ asset('assets/vendors/general/autosize/dist/autosize.js')}}" type="text/javascript"></script>
 		<script src="{{ asset('assets/vendors/general/clipboard/dist/clipboard.min.js')}}" type="text/javascript"></script>
-		<script src="{{ asset('assets/vendors/general/dropzone/dist/dropzone.js')}}" type="text/javascript"></script>
+		<!-- <script src="{{ asset('assets/vendors/general/dropzone/dist/dropzone.js')}}" type="text/javascript"></script> -->
 		<script src="{{ asset('assets/vendors/general/summernote/dist/summernote.js')}}" type="text/javascript"></script>
 		<script src="{{ asset('assets/vendors/general/markdown/lib/markdown.js')}}" type="text/javascript"></script>
 		<script src="{{ asset('assets/vendors/general/bootstrap-markdown/js/bootstrap-markdown.js')}}" type="text/javascript"></script>
@@ -111,14 +111,14 @@
 		<script src="{{ asset('assets/app/custom/general/dashboard.js')}}" type="text/javascript"></script>
 
 		<!--end::Page Scripts -->
- 
+
 		<!--end::Global Theme Bundle -->
 
- 
+
 		<!--begin::Global App Bundle(used by all pages) -->
 		<script src="{{ asset('assets/app/bundle/app.bundle.js')}}" type="text/javascript"></script>
         <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
-	   
+
 		<script src="http://cdnjs.cloudflare.com/ajax/libs/summernote/0.8.4/summernote.js"></script>
 		<!-- <script src="{{ asset('assets/app/custom/general/crud/forms/widgets/summernote.js')}}" type="text/javascript"></script> -->
 
@@ -131,7 +131,7 @@
 
 $('.summernote').summernote({
     height: 500,
-  
+
 });
 });
     @if (session('message'))

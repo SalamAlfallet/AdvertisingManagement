@@ -7,6 +7,8 @@ use App\Http\Controllers\Controller;
 use Illuminate\Support\Facades\DB;
 use App\Products;
 use Storage;
+use Illuminate\Support\Facades\File;
+
 use App\Category;
 
 class CategoryController extends Controller
@@ -15,16 +17,16 @@ class CategoryController extends Controller
 
     public function index()
     {
-         return view('backend.Categories.index')->with([
+        return view('backend.Categories.index')->with([
 
-            'categories' => Category::get()
+            'categories' => Category::all()
         ]);
     }
 
     public function create()
     {
-        $category=Category::all();
-        return view('backend.Categories.addCategory')->with(['category'=>$category]);
+        $category = Category::all();
+        return view('backend.Categories.addCategory')->with(['category' => $category]);
     }
 
     public function store(Request $request)
@@ -34,65 +36,53 @@ class CategoryController extends Controller
 
             'name' => 'required',
 
-            'image' => 'required|image',
+            'image' => 'required',
         ]);
 
-        if ($request->hasFile('image')) {
-            $image = $request->file('image');
-            $path = $image->store('categories', 'public');
-        } else {
+        // if ($request->hasFile('image')) {
+        //     $image = $request->file('image');
+        //     $path = $image->store('categories', 'public');
+        // } else {
 
-            $path = null;
-        }
+        //     $path = null;
+        // }
 
         $category = new Category();
         $category->name = $request->input('name');
-        $category->image = $path;
+        $category->image = $request->image;
+
 
         $category->save();
         if ($category->save()) {
             return redirect(route('admin.category'))->with([
-                'message' => sprintf('category: "%s" add success !', $category->name),
+                'message' => sprintf('تمت عملية الإضافة بنجاح '),
                 'alert-type' => 'success'
             ]);
         } else {
             return redirect()->back()->with([
-                'message' => sprintf('category: "%s" can not add success !', $category->name),
+                'message' => sprintf('هناك مشكلة في عملية الإضافة'),
                 'alert-type' => 'error'
             ])->withInput();
         }
-
-
     }
 
-public function delete($id)
-{
-    $Category = Category::findOrfail($id);
-
-    $Category->delete();
+    public function delete($id)
+    {
 
 
-    if ($Category->delete()) {
-        return redirect(route('admin.category'))->with([
-            'message' => sprintf('تم الحذف بنجاح'),
-            'alert-type' => 'success'
-        ]);
-    } else {
-        return redirect()->back()->with([
-            'message' => sprintf('خطأ في عملية الحذف !'),
-            'alert-type' => 'error'
-        ])->withInput();
+
+        $Category = Category::findOrfail($id);
+        if (!empty($Category)) {
+            $Category->delete();
+            $data['msg'] =  'success';
+        } else {
+            $data['msg'] = 'error';
+        }
+
+        return response()->json($data);
     }
 
 
-        
-
-
-
-
-
-
-}
     public function editCategory($id)
     {
         $Category = Category::findOrfail($id);
@@ -115,43 +105,17 @@ public function delete($id)
     {
         $category = Category::findOrfail($id);
 
-        $description = $request->input('description');
-        libxml_use_internal_errors(true);
 
-        $dom = new \DomDocument();
-        $dom->loadHtml($description, LIBXML_HTML_NOIMPLIED | LIBXML_HTML_NODEFDTD);
-        $images = $dom->getElementsByTagName('img');
+        if ($category->image != null) {
 
-        foreach($images as $k=> $img){
-        $data = $img->getAttribute('src');
-        if(preg_match('/data:image/', $data)){
-            // get the mimetype
-            preg_match('/data:image\/(?<mime>.*?)\;/', $data, $groups);
-            $mimetype = $groups['mime'];
+                File::delete('storage/' . $category->image );
 
-                list($type, $data) = explode(';', $data);
-                list(, $data)      = explode(',', $data);
-                $data = base64_decode($data);
-                $image_name= "images/" .time().$k.".".$mimetype;
-                 $path = storage_path($image_name);
-                file_put_contents($path, $data);
-                $img->removeAttribute('src');
-                  $new_src= Storage::url($image_name);
-                  $filepath= asset($new_src);
-                $img->setAttribute('src',$filepath);
+
         }
-    }
-        $description = $dom->saveHTML();
-        $image = $request->file('image');
 
-        if ($image && $image->isValid()) {
-            $path = $image->storeAs('categories', basename($category->image), 'public');
-            $category->image = $path;
-        }
 
         $category->name = $request->input('name');
-        $category->description = $description;
-        $category->parent_id = $request->input('category_id');
+        $category->image = $request->input('image');
 
         $category->save();
         if ($category->save()) {
@@ -165,7 +129,26 @@ public function delete($id)
                 'alert-type' => 'error'
             ])->withInput();
         }
-     }
+    }
+
+
+    public function uploadsFile(Request $request)
+    {
+
+
+        if ($request->file('file')) {
+
+            $file = $request->file('file');
+            $path = $file->store('Categories', 'public');
+
+
+
+            // return $path;
+            return response()->json(['success' => $path]);
+        }
+
+        return "";
+    }
 
 
 

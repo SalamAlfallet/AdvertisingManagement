@@ -200,15 +200,15 @@
 
 	                                </g>
 
-	                            </svg></span><span class="kt-menu__link-text">Categories</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+	                            </svg></span><span class="kt-menu__link-text">التصنيفات</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
 
 	                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 
 	                        <ul class="kt-menu__subnav">
 
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Categories</span></a></li>
+	                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{route('admin.category')}}" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">جميع التصنيفات </span></a></li>
 
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{route('admin.category.create')}}" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Category</span></a></li>
+	                            <li class="kt-menu__item " aria-haspopup="true"><a href="{{route('admin.category.create')}}" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">إضافة تصنيف</span></a></li>
 
 
 
