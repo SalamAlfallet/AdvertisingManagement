@@ -29,8 +29,9 @@ class AdvsController extends Controller
 // Search advertising by Category
     public function advsByCategory($category_id)
     {
-        $advs = Adv::where('category_id', $category_id)->get();
-
+        $advs = Adv::where('category_id', $category_id)
+        ->where('status', 1)
+        ->latest()->get();
         return response([ 'data'=>$advs, 'message' => 'Retrieved successfully'], 200);
 
     }

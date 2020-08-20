@@ -1,5 +1,6 @@
 @extends('backend.layouts.admin')
-
+<!-- <title>التصنيفات </title> -->
+@section('title',' التصنيفات')
 @section('style')
 <!--begin::Page Vendors Styles(used by this page) -->
 <link href="{{asset('assets/vendors/custom/datatables/datatables.bundle.css')}}" rel="stylesheet" type="text/css" />
@@ -8,6 +9,8 @@
 
 
 @endsection
+
+
 
 @section('content')
 

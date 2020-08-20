@@ -8,13 +8,16 @@
 
 	    <!-- begin:: Aside -->
 
-	    <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand">
+	    <div class="kt-aside__brand kt-grid__item " id="kt_aside_brand" style="
+    height: 100px;">
 
 	        <div class="kt-aside__brand-logo">
 
-            <a href="#">
+	            <a href="#">
 
-	                <img alt="Logo" src="{{asset('assets/media/logos/logo-dashboard.png')}}" />
+	                <img style="
+   padding-right: 43px;
+   " src="{{asset('assets/media/logos/logo-autosouq.png')}}">
 
 	            </a>
 
@@ -82,111 +85,35 @@
 
 	            <ul class="kt-menu__nav ">
 
-				<li class="kt-menu__item " aria-haspopup="true"><a target="_blank" href="#"   class="kt-menu__link ">
-				<span class="fas fa-home">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-													<rect id="bound" x="0" y="0" width="24" height="24"></rect>
- 												</g>
-											</svg>
-										</span>
-
-											<span class="kt-menu__link-text">Home Page</span></a></li>
-
-
-										<hr>
-										<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-
-<span class="fas fa-images">
-
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
-		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-			<rect id="bound" x="0" y="0" width="24" height="24" />
-
-		</g>
-
-	</svg>
-
-</span><span class="kt-menu__link-text">Slider</span>
-
-<i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-
-<ul class="kt-menu__subnav">
-
-	<li class="kt-menu__item " aria-haspopup="true">
- 		<a href="  #" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Images</span></a></li>
-
-	<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Image</span></a></li>
-
-
-
-</ul>
-
-</div>
-
-</li>
-
-<hr>
-
-	                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-
-	                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="fab fa-servicestack">
-
+	                <li class="kt-menu__item " aria-haspopup="true"><a target="_blank" href="{{route('admin.profile.edit')}}" class="kt-menu__link ">
+	                        <span class="fas fa-user">
 	                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
 	                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-	                                    <rect id="bound" x="0" y="0" width="24" height="24" />
-
+	                                    <rect id="bound" x="0" y="0" width="24" height="24"></rect>
 	                                </g>
+	                            </svg>
+	                        </span>
 
-	                            </svg></span><span class="kt-menu__link-text">Services</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+	                        <span class="kt-menu__link-text">الصفحة الشخصية </span></a></li>
 
-	                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 
-	                        <ul class="kt-menu__subnav">
 
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#"class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Services</span></a></li>
+                           
+                            <li class="kt-menu__item " aria-haspopup="true"><a target="_blank" href="{{route('admin.users')}}" class="kt-menu__link ">
 
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Service</span></a></li>
-
-	                        </ul>
-
-	                    </div>
-
-	                </li>
-
-	                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-
-	                    <a href="javascript:;" class="kt-menu__link kt-menu__toggle"><span class="fab fa-bandcamp">
-
+                            <span class="fas fa-users">
 	                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
 	                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-	                                    <rect id="bound" x="0" y="0" width="24" height="24" />
-
+	                                    <rect id="bound" x="0" y="0" width="24" height="24"></rect>
 	                                </g>
+	                            </svg>
+	                        </span>
 
-	                            </svg></span><span class="kt-menu__link-text">Brands</span><i class="kt-menu__ver-arrow la la-angle-right"></i></a>
+	                        <span class="kt-menu__link-text"> المستخدمين </span></a></li>
 
-	                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
 
-	                        <ul class="kt-menu__subnav">
 
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Brands</span></a></li>
 
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Brand</span></a></li>
-
-	                        </ul>
-
-	                    </div>
-
-	                </li>
 
 	                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 
@@ -218,262 +145,31 @@
 
 	                </li>
 
-	                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle">
 
-	                        <span class="fab fa-product-hunt">
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+	                <li class="kt-menu__item " aria-haspopup="true"><a href="{{route('admin.logout')}}" class="kt-menu__link ">
+	                        <span class="fas fa-sign-out-alt">
 	                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
 	                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-	                                    <rect id="bound" x="0" y="0" width="24" height="24" />
-
+	                                    <rect id="bound" x="0" y="0" width="24" height="24"></rect>
 	                                </g>
-
 	                            </svg>
+	                        </span>
 
-	                        </span><span class="kt-menu__link-text">Products</span>
-
-	                        <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-	                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-
-	                        <ul class="kt-menu__subnav">
-
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Products</span></a></li>
-
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Product</span></a></li>
-
-
-
-	                        </ul>
-
-	                    </div>
-
-	                </li>
-
-
-
-
-
-	                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-
-	                        <span class="fas fa-book">
-
-	                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
-	                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-	                                    <rect id="bound" x="0" y="0" width="24" height="24" />
-
-	                                </g>
-
-	                            </svg>
-
-	                        </span><span class="kt-menu__link-text">E-Catalogue</span>
-
-	                        <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-	                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-
-	                        <ul class="kt-menu__subnav">
-
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Catalogues</span></a></li>
-
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Catalogue</span></a></li>
-
-
-
-	                        </ul>
-
-	                    </div>
-
-	                </li>
-
-	                <hr>
-
-
-
-
-
-	                <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-
-	                        <span class="fab fa-blogger-b">
-
-	                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
-	                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-	                                    <rect id="bound" x="0" y="0" width="24" height="24" />
-
-	                                </g>
-
-	                            </svg>
-
-	                        </span><span class="kt-menu__link-text">Blog</span>
-
-	                        <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-	                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-
-	                        <ul class="kt-menu__subnav">
-
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Posts</span></a></li>
-
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Post</span></a></li>
-
-
-
-	                        </ul>
-
-	                    </div>
-
-	                </li>
-
-
-
-	                <!-- <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-
-	                        <span class="fas fa-newspaper">
-
-	                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
-	                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-	                                    <rect id="bound" x="0" y="0" width="24" height="24" />
-
-	                                </g>
-
-	                            </svg>
-
-	                        </span><span class="kt-menu__link-text">News</span>
-
-	                        <i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-	                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-
-	                        <ul class="kt-menu__subnav">
-
-	                            <li class="kt-menu__item " aria-haspopup="true">
-
-                                    <a href="{{--{{route('admin.news')}}--}}" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All News</span></a></li>
-
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add New</span></a></li>
-
-
-
-	                        </ul>
-
-	                    </div>
-
-	                </li> -->
-
-	                <hr>
-
-
-
-                    <li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover">
-					<a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-
-	                        <span class="fas fa-address-card">
-
-	                            <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
-	                                <g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-	                                    <rect id="bound" x="0" y="0" width="24" height="24" />
-
-	                                </g>
-
-	                            </svg>
-
-	                        </span><span class="kt-menu__link-text">About US</span>
-	                        <i class="kt-menu__ver-arrow la la-angle-right"></i>
-							</a>
-
-	                    <div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-
-	                        <ul class="kt-menu__subnav">
-
-	                            <li class="kt-menu__item " aria-haspopup="true">
-
-                                    <a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Section</span></a></li>
-
-	                            <li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">Add Section</span></a></li>
-
-
-
-	                        </ul>
-
-	                    </div>
-
-                    </li>
-
-
-
-
-                    <hr>
-
-					<li class="kt-menu__item " aria-haspopup="true"><a  href="#"   class="kt-menu__link ">
-					<span class="fas fa-user-cog">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-													<rect id="bound" x="0" y="0" width="24" height="24"></rect>
- 												</g>
-											</svg>
-										</span>
-
-											<span class="kt-menu__link-text">Settings</span></a></li>
-
-										<hr>
-										<li class="kt-menu__item  kt-menu__item--submenu" aria-haspopup="true" data-ktmenu-submenu-toggle="hover"><a href="javascript:;" class="kt-menu__link kt-menu__toggle">
-
-<span class="fa fa-user-friends">
-
-	<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-
-		<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-
-			<rect id="bound" x="0" y="0" width="24" height="24" />
-
-		</g>
-
-	</svg>
-
-</span>
-<span class="kt-menu__link-text">Users</span>
-
-<i class="kt-menu__ver-arrow la la-angle-right"></i></a>
-
-<div class="kt-menu__submenu "><span class="kt-menu__arrow"></span>
-
-<ul class="kt-menu__subnav">
-
-	<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-database"><span></span></i><span class="kt-menu__link-text">All Users</span></a></li>
-
-	<li class="kt-menu__item " aria-haspopup="true"><a href="#" class="kt-menu__link "><i class="kt-menu__link-bullet fa fa-plus-circle"><span></span></i><span class="kt-menu__link-text">New User</span></a></li>
-
-
-
-</ul>
-
-</div>
-
-</li>
-
-<hr>
-
-
-					<li class="kt-menu__item " aria-haspopup="true"><a  href="#"   class="kt-menu__link ">
-					<span class="fas fa-sign-out-alt">
-						<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="24px" height="24px" viewBox="0 0 24 24" version="1.1" class="kt-svg-icon">
-												<g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-													<rect id="bound" x="0" y="0" width="24" height="24"></rect>
- 												</g>
-											</svg>
-										</span>
-
-											<span class="kt-menu__link-text">Sign Out</span></a></li>
+	                        <span class="kt-menu__link-text"> تسجيل خروج</span></a></li>
 
 
 
@@ -496,4 +192,3 @@
 
 
 	<!-- end:: Aside -->
-

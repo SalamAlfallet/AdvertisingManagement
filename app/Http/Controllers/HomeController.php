@@ -18,7 +18,7 @@ class HomeController extends Controller
      */
     public function __construct()
     {
-        // $this->middleware('auth');
+        $this->middleware('auth');
     }
 
     /**
@@ -28,8 +28,8 @@ class HomeController extends Controller
      */
     public function index()
     {
-       // return auth::user()->name;
-        // return redirect(route('profile',['id'=>auth::user()->name]));
+    //    return auth::user()->name;
+        return redirect(route('admin.profile.edit'));
     }
 
 

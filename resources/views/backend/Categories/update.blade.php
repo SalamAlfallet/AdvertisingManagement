@@ -1,4 +1,8 @@
 @extends('backend.layouts.admin')
+
+
+@section('title',' تعديل تصنيف')
+
 @section('style')
 <style>
     .image {

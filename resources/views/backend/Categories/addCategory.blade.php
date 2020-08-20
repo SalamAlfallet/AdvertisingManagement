@@ -1,4 +1,8 @@
 @extends('backend.layouts.admin')
+
+@section('title',' اضافة تصنيف')
+
+
 @section('content')
 
 
